@@ -17,23 +17,26 @@
                     <div class="cards">
                         <h2 class="cards__titulo">Navegue pela galeria</h2>
                         <ul class="cards__lista">
-                            {%for foto_id, info in cards.items%}
+                            {%if cards%}
+                            {%for fotos in cards%}
                             <li class="card">
-                                <a href="{%url 'imagem'%}">
-                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/carina-nebula.png'%}" alt="foto">
+                                <a href="{%url 'imagem' fotos.id %}">
+                                    <img class="card__imagem" src="{% static '/assets/imagens/galeria/'%}{{fotos.foto}}" alt="foto">
                                 </a>
                                 <span class="card__tag">Estrelas</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">{{ info.Nome }}</p>
+                                    <p class="card__titulo">{{ fotos.Nome }}</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">{{info.legenda}}</p>
+                                        <p class="card__descricao">{{fotos.legenda}}</p>
                                         <span>
                                             <img src="{% static '/assets/ícones/1x/favorite_outline.png" alt="ícone de coração'%}">
                                         </span>
                                     </div>
                                 </div>
                             </li>
-                            {%endfor%}
+                            {% endfor %}
+                            {% else %}
+                            {% endif %}
                         </ul>
                     </div>
 
