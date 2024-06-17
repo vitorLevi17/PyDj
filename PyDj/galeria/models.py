@@ -19,7 +19,7 @@ class Fotografia(models.Model):
     publicada = models.BooleanField(default = False)
     datas = models.DateTimeField(default=datetime.now)
     def __str__(self):
-        return f"Fotografia[nome = {self.nome}]"
+        return self.nome
 
 
 
