@@ -1,3 +1,3 @@
 from django.db import models
 
-# Create your models here.
+#o DJANGO já tras tabela de users

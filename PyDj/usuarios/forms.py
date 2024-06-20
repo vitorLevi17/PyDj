@@ -58,7 +58,7 @@ class CadastroForms(forms.Form):
             }
         )
     )
-    senha_login = forms.CharField(
+    senha_login2 = forms.CharField(
         label="Senha",
         required=True,
         max_length=70,
