@@ -21,7 +21,6 @@ def login(request):
             )
             if usuario != None:
                 auth.login(request,usuario)
-                messages.success(request,f"{nome} logado com sucesso")
                 return redirect('index')
             else:
                 messages.error(request,"Usuario ou senha incorretos")
@@ -36,9 +35,7 @@ def cadastro(request):
         form = CadastroForms(request.POST)
 
         if form.is_valid():
-            if form["senha_login1"].value() != form["senha_login2"].value():
-                messages.error(request,"Senhas diferentes")
-                return redirect('cadastro')
+
 
             nome=form["nome_cadastro"].value()
             email=form["email_cadastro"].value()
