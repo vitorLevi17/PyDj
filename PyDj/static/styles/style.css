@@ -460,7 +460,7 @@ table {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.btn-success {
+btn-success {
     --bs-btn-color: #fff;
     --bs-btn-bg: #198754;
     --bs-btn-border-color: #198754;
@@ -477,7 +477,7 @@ table {
     --bs-btn-disabled-border-color: #198754;
 }
 
-.btn-danger {
+btn-danger {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545;
